@@ -14,9 +14,7 @@ const cookieOption = {
 export const login = async (req, res, next) => {
 
     try{
-
         const {email, password} = req.body
-
         if(!email || !password){
             return next (new AppError('please provide email and password' , 400))
         }

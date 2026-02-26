@@ -69,23 +69,8 @@ export const logout =  (req, res ,next) => {
 }
 
 
-// export const adminProfile = async(req, res, next) => {
-
-//   try{
-
-//   }catch(e){
-
-//   }
-// }
-
-
-
-//*
-
-
 export const registerLibrarian = async (req, res, next) => {
-
-   try{
+    try{
     const {name, email, role} = req.body
    // console.log(req.body)
     if(!name || !email || !role){
@@ -108,7 +93,6 @@ export const registerLibrarian = async (req, res, next) => {
     })
    
     try{
-       // console.log("password, ", tempPassword)
       const message = `
      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
       <p>Dear <strong> ${user.name} </strong>,</p>
