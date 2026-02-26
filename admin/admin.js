@@ -9,12 +9,12 @@ import User from '../model/user.model.js'
         if(!isAdminExistis){
              await User.create({
                 name: "atul maurya",
-                email: "akmaury80@gmail.com",
+                email: process.env.EMAIL,
                 password: process.env.PASSWORD,
                 role: "admin"
             })
         }
-      
+       
      }catch(e){
         console.log("error while creating admin: ", e)
      }
@@ -22,5 +22,5 @@ import User from '../model/user.model.js'
 }  
  
 export default admin
-  
+   
     
